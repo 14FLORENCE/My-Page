@@ -1,5 +1,9 @@
-$(window).load(function(){
-	$('#preloader').fadeOut('slow',function(){$(this).remove();});
+// Faster preloader - hide when DOM is ready instead of waiting for all images
+$(document).ready(function(){
+	// Add a small delay to ensure smooth transition
+	setTimeout(function(){
+		$('#preloader').fadeOut('slow',function(){$(this).remove();});
+	}, 500);
 });
 
 
