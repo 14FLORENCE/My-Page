@@ -206,7 +206,12 @@ function ssc_overflowingAncestor(e) {
 }
 
 function ssc_addEvent(e, t, n) {
-    window.addEventListener(e, t, n || false)
+    // For wheel/mousewheel events, explicitly set passive: false to allow preventDefault
+    if (e === 'mousewheel' || e === 'wheel') {
+        window.addEventListener(e, t, { passive: false, capture: !!n })
+    } else {
+        window.addEventListener(e, t, n || false)
+    }
 }
 
 function ssc_removeEvent(e, t, n) {
