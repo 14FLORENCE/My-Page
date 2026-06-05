@@ -5,865 +5,398 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Performance Optimizations -->
+    <meta name="description" content="Florence Sway — Web Designer, Data Scientist & Software Engineer. Building dynamic, responsive web and mobile applications with passion.">
+
+    <title>Florence Sway — Web Designer · Data Scientist · Software Engineer</title>
+
+    <!-- Preconnect / Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://ajax.googleapis.com">
-    <link rel="dns-prefetch" href="//docs.google.com">
-    <link rel="dns-prefetch" href="//www.google.com">
-    <!-- Website Title -->
-    <title>Florence Sway- Professional web designer and Data Scientist</title>
-    <!-- Bootstrap -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font-Awesome -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons (local Font Awesome) -->
     <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Lightbox -->
-    <link href="assets/lightbox/css/lightbox.css" rel="stylesheet">
-    <!-- Text Rotator-->
-    <link href="assets/textrotator/simpletextrotator.css" rel="stylesheet">
-    <!-- FlexSlider -->
-    <link href="assets/flexslider/flexslider.css" rel="stylesheet">
-    <!-- Theme Style -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Animations -->
-    <link href="css/animate.css" rel="stylesheet">
-    <!-- Custom Favicon -->
+
+    <!-- Modern theme -->
+    <link href="css/modern.css" rel="stylesheet">
+
+    <!-- Favicon -->
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="assets/html5shiv/html5shiv.js"></script>
-    <script src="assets/respond/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body id="top">
 
-    <!-- ****************************** Preloader ************************** -->
-    <div id="preloader"></div>
+    <!-- Scroll progress -->
+    <div id="progress"></div>
 
-    <!-- Scroll Progress Indicator -->
-    <div id="scroll-progress-bar"></div>
-
-
-    <!-- ==========================
-        HEADER SECTION
-        =========================== -->
-    <header id="home">
-        <!-- creative menu -->
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="menu-wrap">
-                    <nav class="menu">
-                        <!-- Menu Links -->
-                        <div class="icon-list">
-                            <a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-                            <a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-                            <a href="index.html#service"><i class="fa fa-fw fa-globe"></i><span>Service</span></a>
-                            <a href="index.html#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Pictures</span></a>
-                            <a href="index.html#blog"><i class="fa fa-fw fa-briefcase"></i><span>Work</span></a>
-                            <a href="index.html#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
-                        </div>
-                    </nav>
-                </div>
-                <button class="menu-button" id="open-button"></button><!-- menu button -->
-            </div>
-            <!--/row-->
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#top" class="nav__logo">Florence<b>Sway</b><span class="dot">.</span></a>
+            <nav class="nav__links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#journey">Journey</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="btn btn--primary nav__cta">Hire Me <i class="fa fa-arrow-right"></i></a>
+            <button class="nav__toggle" id="navToggle" aria-label="Open menu"><i class="fa fa-bars"></i></button>
         </div>
-        <!--/container-->
-        <!-- Header Image -->
-        <section class="hero" id="hero">
-            <div class="container">
-                <!-- Slider Button (don't edit!)-->
-                <div class="row">
-                    <div class="col-md-12 text-right navicon">
-                        <a id="nav-toggle" class="nav_slide_button" href="index.html#"><span></span></a>
-                    </div>
-                </div>
-                <!-- HEADER HEADLINE -->
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-1 inner">
-                        <h1 class="animated fadeInDown">
-                            FlO<span style="color:#0066CC;">RE</span>NCE<br />
-                            <span>S<span style="color:#FFE800">WA</span>Y</span>
-                        </h1><!-- Title -->
-                        <h3 class="animated fadeInUp delay-05s"><span class="rotate">Web Designer,Data Scientist,Software Engineering</span></h3><!-- Text Rotator -->
-                    </div>
-                </div>
-                <!-- Learn More Button -->
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center">
-                        <a href="index.html#about" class="scrollto wow fadeInUp delay-5s">
-                            <p style="color: rgb(0, 102, 204) !important; font-size: 18px; font-weight: bold;">SEE MORE</p>
-                            <p class="scrollto--arrow">
-                                <img src="img/scroll-down.png" alt="scroll down arrow" loading="lazy">
-                            </p>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Header Image End -->
     </header>
-    <!-- ==========================
-        HEADER SECTION END
-        =========================== -->
 
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="menuClose" aria-label="Close menu"><i class="fa fa-times"></i></button>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journey">Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-
-
-    <!-- ==========================
-        ABOUT SECTION
-        =========================== -->
-    <section class="intro text-center section-padding color-bg" id="about">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+        <div class="hero__photo">
+            <img src="img/header-bg.JPG" alt="Florence Sway" loading="eager">
+        </div>
         <div class="container">
-            <!-- WELCOME TEXT -->
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-md-offset-2 wp1">
-                    <h1 class="arrow">A little <span>about</span> me</h1><!-- Headline -->
-                    <!-- about / welcome text -->
-                    <p>I’m Florence Sway, a developer with a flair for creating dynamic and responsive web and mobile applications. My journey into technology has been marked by a constant drive to innovate and provide creative solutions like this web <a href="https://14florence.github.io/Field/">OFA</a>,<a href="https://14florence.github.io/Home/">FSway</a>
-                        .This website is a portfolio of my projects, skills, and the journey that defines my work in web and software development.Explore my projects ranging from web applications, chatbots, and content generators, to systems development in PHP and beyond. I believe in creating solutions that are visually appealing, user-friendly, and highly functional.</p>
+            <div class="hero__content">
+                <h1>Hi There, I'm <span class="blue">Florence</span> <span class="yellow">Sway</span></h1>
+                <p class="hero__role">I'm a <span class="typed" id="typed"></span></p>
+                <p class="hero__desc">I build dynamic, responsive web &amp; mobile applications — from AI chatbots and content generators to full systems — with a flair for clean, user-friendly design.</p>
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">View My Work <i class="fa fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+                </div>
+                <div class="hero__socials">
+                    <a href="https://github.com/14FLORENCE" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                    <a href="https://linkedin.com/in/florence-sway-267b982b6/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://x.com/Sway_Florenc" target="_blank" rel="noopener" aria-label="X"><i class="fa fa-twitter"></i></a>
+                    <a href="https://m.facebook.com/florence.sway.73/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="mailto:florencesway@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
+        <a href="#about" class="scroll-cue">Scroll <i class="fa fa-angle-down"></i></a>
     </section>
 
-
-
-
-    <!-- ==========================
-        SERVICE SECTION
-        =========================== -->
-    <section class="features text-center section-padding" id="service">
-        <div class="container">
-            <!-- Headline -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="arrow">I do amazing things for clients</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="services">
-                        <!-- Service Box 1 -->
-                        <div class="col-md-4 wp2 item">
-                            <div class="icon">
-                                <i class="fa fa-comments"></i>
-                                <!-- Icon -->
-                            </div>
-                            <h2>Chatbot Integration</h2><!-- Title -->
-                            <p>Implementing intelligent chatbots using OpenAI’s API for seamless user interaction and automated assistance.</p><!-- Description -->
-                        </div>
-                        <!-- Service Box 2 -->
-                        <div class="col-md-4 wp2 item delay-05s">
-                            <div class="icon">
-                                <i class="fa fa-desktop"></i><!-- Icon -->
-                            </div>
-                            <h2>Web Designer</h2><!-- Title -->
-                            <p>Designing and building responsive and efficient web applications,
-                                including dynamic content generators and chatbots.</p><!-- Description -->
-                        </div>
-                        <!-- Service Box 3 -->
-                        <div class="col-md-4 wp2 item delay-1s">
-                            <div class="icon">
-                                <i class="fa fa-cubes"></i><!-- Icon -->
-                            </div>
-                            <h2>UI/UX Design</h2><!-- Title -->
-                            <p>Creating visually appealing and user-friendly interfaces,
-                                ensuring that your web presence is both functional and stylish.</p><!-- Description -->
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-    <div class="container-fluid">
-        <!-- About 1 -->
-        <div class="row color-bg">
-            <div class="col-md-6 nopadding features-intro-img">
-                <div class="about-image" style="background-image:url(img/about1.png)"></div><!-- about image 1 -->
-            </div>
-            <div class="col-md-6 about-text">
-                <h6>High quality webdesign</h6><!-- headline-->
-                <p>Experience stunning web design that blends aesthetics and functionality. My website features a modern, minimalist layout, making it easy for visitors to navigate through my projects and services while enjoying a visually appealing interface.</p><br><!-- About Text 1 -->
-                <a href="https://14florence.github.io/Field/" class="weight-outline-btn">view Page</a><!-- read more button  -->
-            </div>
-        </div>
-        <!-- About 2 -->
-        <div class="row">
-            <div class="col-md-6 about-text">
-                <h6>Professional Chatbot</h6><!-- Headline -->
-                <p>Enhance your experience with SwayBot, an intelligent chatbot that provides instant responses and support. Seamlessly integrated into the website, SwayBot ensures that users receive timely information, making navigation effortless and efficient.</p><br><!-- About Text 2 -->
-                <!-- <a href="index.html#team" class="weight-outline-btn">Read more</a> read more button -->
-            </div>
-            <div class="col-md-6 nopadding features-intro-img">
-                <div class="about-image" style="background-image:url(img/about2.png)"></div><!-- about image 2 -->
-            </div>
-        </div>
-        <!-- About 3 -->
-        <div class="row color-bg">
-            <div class="col-md-6 nopadding features-intro-img">
-                <div class="about-image" style="background-image:url(img/about3.png)"></div><!-- about image 3 -->
-            </div>
-            <div class="col-md-6 about-text">
-                <h6>UI/UX and animations</h6><!-- Headline-->
-                <p>Enjoy an exceptional user experience with a focus on intuitive design and accessibility. The website’s UI/UX is crafted to ensure smooth navigation, engaging interactions, and a responsive layout, providing a seamless experience across all devices.</p><br><!-- About Text 3 -->
-                <!-- <a href="index.html#team" class="weight-outline-btn">Read more</a>read more button -->
-            </div>
+    <!-- ===================== MARQUEE STRIP ===================== -->
+    <div class="strip">
+        <div class="strip__track">
+            <span>Web Design</span><span>Data Science</span><span>Software Engineering</span><span>Chatbots &amp; AI</span><span>UI / UX</span><span>PHP Systems</span>
+            <span>Web Design</span><span>Data Science</span><span>Software Engineering</span><span>Chatbots &amp; AI</span><span>UI / UX</span><span>PHP Systems</span>
         </div>
     </div>
-    <!-- ==========================
-        ABOUT SECTION END
-        =========================== -->
 
-
-
-
-    <!-- ==========================
-        PORTFOLIO SECTION
-    =========================== -->
-    <section class="swag text-center" id="portfolio">
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
         <div class="container">
-            <!-- Headline -->
-            <div class="row">
-                <h1 class="arrow">
-                    My <span>Gallery</span>
-                </h1>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="row row-offset-0">
-
-            <!-- PORTFOLIO ITEM 1 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                        <a href="img/portfolio/portfolio-01-large.jpg" data-lightbox="roadtrip" title="Photo One - Award for good project at COSTECH"><img src="img/portfolio/portfolio-01-thumbnail.jpg" alt="Portfolio Item" loading="lazy"></a>
+            <div class="about__grid">
+                <div class="about__media reveal">
+                    <img src="img/header-bg.JPG" alt="Portrait of Florence Sway">
+                    <span class="frame"></span>
+                </div>
+                <div class="about__text reveal">
+                    <span class="eyebrow">About Me</span>
+                    <h2 class="section-title">A little <span>about</span> me</h2>
+                    <p>I'm <strong>Florence Sway</strong>, a software engineer and web designer specializing in dynamic, responsive web and mobile applications. Driven by a passion for innovation, I transform complex challenges into clean, dependable solutions — including projects such as <a href="https://senda.mifumolabs.com/" target="_blank" rel="noopener">SENDA</a> and <a href="https://tanzabuild.com/" target="_blank" rel="noopener">TANZABUILD</a>.</p>
+                    <p>My expertise spans web applications, AI chatbots, content generators, and full systems development in PHP and beyond. I'm committed to delivering products that are visually refined, intuitive to use, and engineered to perform reliably at scale.</p>
+                    <div class="about__stats">
+                        <div class="stat"><div class="num">10+</div><div class="lbl">Projects Delivered</div></div>
+                        <div class="stat"><div class="num">5+</div><div class="lbl">Happy Clients</div></div>
+                        <div class="stat"><div class="num">10+</div><div class="lbl">Technologies</div></div>
                     </div>
-                </div>
-            </div>
-            <!-- PORTFOLIO ITEM END -->
-
-            <!-- PORTFOLIO ITEM 2 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                        <a href="img/portfolio/portfolio-02-large.jpg" data-lightbox="roadtrip" title="Photo Two -BUNI Leaders AND Members "><img src="img/portfolio/portfolio-02-thumbnail.jpg" alt="Portfolio Item" loading="lazy"></a>
-                    </div>
-                </div>
-            </div>
-            <!-- PORTFOLIO ITEM END -->
-
-            <!-- PORTFOLIO ITEM 3 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                        <a href="img/portfolio/portfolio-03-large.jpg" data-lightbox="roadtrip" title="Photo Three - Team Game"><img src="img/portfolio/portfolio-03-thumbnail.jpg" alt="Portfolio Item" loading="lazy"></a>
-                    </div>
-                </div>
-            </div>
-            <!-- PORTFOLIO ITEM END -->
-
-            <!-- PORTFOLIO ITEM 4 -->
-            <div class="col-md-3 col-sm-6 ">
-                <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                        <a href="img/portfolio/portfolio-04-large.jpg" data-lightbox="roadtrip" title="Photo Four - Group Team between safari Chap and Talent promoters"><img src="img/portfolio/portfolio-04-thumbnail.jpg" alt="Portfolio Item" loading="lazy"></a>
-                    </div>
-                </div>
-            </div>
-            <!-- PORTFOLIO ITEM END -->
-
-            <!-- PORTFOLIO ITEM 5 -->
-            <div class="col-md-3 col-sm-6 ">
-                <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                        <a href="img/portfolio/portfolio-05-large.jpg" data-lightbox="roadtrip" title="Photo Five - BUNI Members"><img src="img/portfolio/portfolio-05-thumbnail.jpg" alt="Portfolio Item" loading="lazy"></a>
-                    </div>
-                </div>
-            </div>
-            <!-- PORTFOLIO ITEM END -->
-
-            <!-- PORTFOLIO ITEM 6 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                        <a href="img/portfolio/portfolio-06-large.jpg" data-lightbox="roadtrip" title="Photo Six - FLorence Sway CV Page"><img src="img/portfolio/portfolio-06-thumbnail.jpg" alt="Portfolio Item" loading="lazy"></a>
-                    </div>
-                </div>
-            </div>
-            <!-- PORTFOLIO ITEM END -->
-
-            <!-- PORTFOLIO ITEM 7 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                        <a href="img/portfolio/portfolio-07-large.jpg" data-lightbox="roadtrip" title="Photo Seven - Team Game & Fun sport"><img src="img/portfolio/portfolio-07-thumbnail.jpg" alt="Portfolio Item" loading="lazy"></a>
-                    </div>
-                </div>
-            </div>
-            <!-- PORTFOLIO ITEM END -->
-
-            <!-- PORTFOLIO ITEM 8 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                        <a href="img/portfolio/portfolio-08-large.jpg" data-lightbox="roadtrip" title="Photo Eight -Safari Chap Project"><img src="img/portfolio/portfolio-08-thumbnail.jpg" alt="Portfolio Item" loading="lazy"></a>
-                    </div>
-                </div>
-            </div>
-            <!-- PORTFOLIO ITEM END -->
-        </div>
-        <!--/row-->
-    </div>
-    <!--/.container-->
-    <!-- ==========================
-        PORTFOLIO SECTION END
-        =========================== -->
-
-
-
-
-    <!-- ==========================
-        CUSTOM SPACER
-        =========================== -->
-    <div class="spacer-cta text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a href="index.html#contact" class="outline-btn">hire Florence Sway</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ==========================
-        CUSTOM SPACER END
-        =========================== -->
-
-
-
-    <!-- ==========================
-        BLOG SECTION
-        =========================== -->
-    <section class="text-center section-padding" id="blog">
-        <div class="container">
-            <!-- Headline -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="arrow">My <span>Work</span> & Projects</h1>
-                </div>
-            </div><br><br>
-
-            <!-- Blog Slider -->
-            <div class="row">
-                <div id="blogSlider">
-                    <ul class="slides">
-                        <li>
-                            <!-- Work Entry 1 -->
-                            <div class="col-md-4 wp4">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="img/surasoft.png" alt="SuraSoft" loading="lazy"><!-- Work Image -->
-                                    </div>
-                                </div>
-                                <br>
-                                <h2>SuraSoft</h2><!-- Headline -->
-                                <p>Innovative software solutions and development services, specializing in custom applications and system integration.</p><!-- Description-->
-                                <a href="https://quantumintelligence.co.tz/" class="work-link">Visit Website</a>
-                            </div>
-                            <!-- Work Entry 2 -->
-                            <div class="col-md-4 wp4 delay-05s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="img/quantum-intelligence.png" alt="Quantum Intelligence" loading="lazy"><!-- Work Image -->
-                                    </div>
-                                </div>
-                                <br>
-                                <h2>Quantum Intelligence</h2><!-- Headline -->
-                                <p>Advanced AI and machine learning solutions, providing intelligent automation and data-driven insights for businesses.</p><!-- Description -->
-                                <a href="https://quantumintelligence.co.tz/" class="work-link">Visit Website</a>
-                            </div>
-                            <!-- Work Entry 3 -->
-                            <div class="col-md-4 wp4 delay-1s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="img/deep-operator.png" alt="Deep Operator" loading="lazy"><!-- Work Image -->
-                                    </div>
-                                </div>
-                                <br>
-                                <h2>Deep Operator</h2><!-- Headline -->
-                                <p>Specialized in deep learning and neural network development, creating cutting-edge AI models for complex problem-solving.</p><!-- Description-->
-                                <a href="https://quantumintelligence.co.tz/" class="work-link">Visit Website</a>
-                            </div>
-                        </li>
-                        <li>
-                            <!-- Work Entry 4 -->
-                            <div class="col-md-4 wp4">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="img/mfumosms.png" alt="MfumOSMS" loading="lazy"><!-- Work Image -->
-                                    </div>
-                                </div>
-                                <br>
-                                <h2>MfumOSMS</h2><!-- Headline -->
-                                <p>Bulk SMS solutions and communication platform, enabling businesses to reach their customers effectively through text messaging.</p><!-- Description -->
-                                <a href="https://sms.mifumolabs.com/" class="work-link">Visit Website</a>
-                            </div>
-                            <!-- Work Entry 5 -->
-                            <div class="col-md-4 wp4 delay-05s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="img/mfumolabs.png" alt="Mfumolabs" loading="lazy"><!-- Work Image -->
-                                    </div>
-                                </div>
-                                <br>
-                                <h2>Mfumolabs</h2>
-                                <p>Technology innovation hub focused on developing next-generation solutions and fostering digital transformation initiatives.</p>
-                                <a href="https://www.mifumolabs.com/" class="work-link">Visit Website</a>
-                            </div>
-                            <!-- Work Entry 6 -->
-                            <div class="col-md-4 wp4 delay-1s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="img/falcon-cooperation.png" alt="Falcon Cooperation" loading="lazy"><!-- Work Image -->
-                                    </div>
-                                </div>
-                                <br>
-                                <h2>Falcon Cooperation</h2><!-- Headline -->
-                                <p>Strategic business partnerships and collaborative ventures, building strong alliances for mutual growth and success.</p>
-                                <a href="https://falcon-cooperation.lovable.app" class="work-link">Visit Website</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==========================
-        BLOG SECTION END
-        =========================== -->
-
-
-
-    <!-- ==========================
-        CLIENT SECTION
-        =========================== -->
-    <div class="container-fluid">
-        <div class="row color-bg">
-            <!-- Left Image -->
-            <div class="col-md-6 nopadding features-intro-img wow fadeInLeft">
-                <div class="about-image" style="background-image:url(img/clients.png)"></div>
-            </div>
-            <!-- Clients / Testimonials -->
-            <div class="col-md-6 nopadding about-text">
-                <h6>What our clients said</h6>
-                <div id="clientSlider">
-                    <ul class="slides">
-                        <li>
-                            <p>Your website design is truly impressive! The clean layout and easy navigation make it so user-friendly. Everything feels modern and well-organized, allowing visitors to find information effortlessly.<br>
-                                <small>- Mgasa Lucas, Quantum intelligence</small></p>
-                        </li>
-                        <li>
-                            <p>SwayBot is such a game-changer! The chatbot’s quick and accurate responses really enhance the experience on your site. It's intuitive and feels like a great assistant for navigating through your projects.<br>
-                                <small>- Philip Jonas, EASTC</small></p>
-                        </li>
-                        <li>
-                            <p>I love the attention to detail in the UI/UX. Every element feels purposeful, and the responsive design makes browsing on any device a smooth experience. You’ve really prioritized both style and functionality! <br>
-                                <small>- Vince Richard, COSTECH BUNI</small></p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ==========================
-        CLIENTS SECTION END
-        =========================== -->
-
-
-
-
-
-    <!-- ==========================
-        NEWSLETTER SECTION
-        =========================== -->
-    <section>
-        <div class="container-fluid">
-            <div class="row color-bg">
-                <div class="col-md-6 nopadding subscribe text-center">
-                    <h1><i class="fa fa-paper-plane"></i><span> Subscribe to our Newsletter</span></h1><!-- Heading -->
-
-                    <!-- Formspree form -->
-                    <form action="https://formspree.io/f/xeojybdo" method="POST" class="styled-form">
-                        <label for="email">
-                            Your email:
-                            <input type="email" name="email" id="email" required>
-                        </label>
-                        <label for="message">
-                            Your message:
-                            <textarea name="message" id="message" required></textarea>
-                        </label>
-
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn-submit">Send</button>
-                    </form>
-                </div>
-
-                <!-- Right Column: Image -->
-                <div class="col-md-6 nopadding features-intro-img">
-                    <div class="about-image" style="background-image:url('img/newsletter.png'); background-size: cover; background-position: center;"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CSS Styles for animation and design -->
-    <style>
-        /* Form container styles */
-        .styled-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        /* Label styles */
-        .styled-form label {
-            display: block;
-            font-size: 18px;
-            color: #333;
-            font-weight: bold;
-            text-align: left;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        /* Input and Textarea styles */
-        .styled-form input[type="email"],
-        .styled-form textarea {
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        /* Input focus styles with animation */
-        .styled-form input[type="email"]:focus,
-        .styled-form textarea:focus {
-            border-color: #3498db;
-            box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
-        }
-
-        /* Button styles with hover and animation */
-        .btn-submit {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-submit:hover {
-            background-color: #2980b9;
-            transform: scale(1.05);
-        }
-
-        /* Textarea height */
-        .styled-form textarea {
-            height: 120px;
-            resize: none;
-        }
-
-        /* Add smooth fade-in effect to the entire form */
-        .styled-form {
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-
-    <!-- ==========================
-        NEWSLETTER SECTION END
-        =========================== -->
-
-
-
-    <!-- ==========================
-        CONTACT SECTION
-        =========================== -->
-    <section class="text-center section-padding contact-wrap" id="contact">
-        <!-- To Top Button -->
-        <a href="index.html#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section services" id="services">
         <div class="container">
-            <!-- Headline -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="arrow">Drop <span>me</span> a line</h1>
+            <div class="center-head reveal">
+                <span class="eyebrow">What I Do</span>
+                <h2 class="section-title">I do amazing things for <span>clients</span></h2>
+                <p class="section-lead" style="margin:0 auto;">From idea to launch — design, build, and intelligent automation, all in one place.</p>
+            </div>
+            <div class="cards">
+                <div class="card reveal">
+                    <div class="card__icon"><i class="fa fa-comments"></i></div>
+                    <h3>Chatbot Integration</h3>
+                    <p>Intelligent chatbots built with OpenAI's API for seamless user interaction and automated assistance.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card__icon"><i class="fa fa-desktop"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Responsive, efficient web applications — including dynamic content generators and full systems.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card__icon"><i class="fa fa-cubes"></i></div>
+                    <h3>UI / UX Design</h3>
+                    <p>Visually appealing, user-friendly interfaces that make your web presence both functional and stylish.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card__icon"><i class="fa fa-bar-chart"></i></div>
+                    <h3>Data Science</h3>
+                    <p>Turning data into insight — analysis, visualization, and data-driven solutions for smarter decisions.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card__icon"><i class="fa fa-mobile"></i></div>
+                    <h3>Mobile Apps</h3>
+                    <p>Cross-platform mobile experiences that stay fast, responsive, and delightful on every device.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card__icon"><i class="fa fa-code"></i></div>
+                    <h3>Systems Development</h3>
+                    <p>Custom systems and integrations in PHP and beyond, engineered for reliability and scale.</p>
                 </div>
             </div>
-            <div class="row contact-details">
-                <!-- Adress Box -->
-                <div class="col-md-4">
-                    <div class="dark-box box-hover">
-                        <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
-                        <p>Buguruni Rozana, Dar-es-salaam</p>
-                    </div>
+        </div>
+    </section>
+
+    <!-- ===================== JOURNEY / TIMELINE ===================== -->
+    <section class="section journey" id="journey">
+        <div class="container">
+            <div class="center-head reveal">
+                <span class="eyebrow">My Path</span>
+                <h2 class="section-title">Experience &amp; <span>Journey</span></h2>
+                <p class="section-lead" style="margin:0 auto;">The milestones that shaped how I build today.</p>
+            </div>
+            <div class="timeline">
+                <div class="tl-item reveal">
+                    <div class="when">Now</div>
+                    <h3>Freelance Web &amp; Software Developer</h3>
+                    <div class="org">Independent</div>
+                    <p>Designing and shipping responsive web and mobile apps, AI chatbots, and content generators for clients worldwide.</p>
                 </div>
-                <!-- Phone Number Box -->
-                <div class="col-md-4">
-                    <div class="dark-box box-hover">
-                        <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
-                        <p>+255 684 475 390</p>
-                    </div>
+                <div class="tl-item reveal">
+                    <div class="when">Recent</div>
+                    <h3>AI &amp; Web Development</h3>
+                    <div class="org">Quantum Intelligence</div>
+                    <p>Contributed to AI/ML-driven products and modern web platforms, focusing on intelligent automation and clean UX.</p>
                 </div>
-                <!-- E-Mail Box -->
-                <div class="col-md-4">
-                    <div class="dark-box box-hover">
-                        <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
-                        <p><a href="mailto:www.florencesway@gmail.com">www.florencesway@gmail.com</a></p>
-                    </div>
+                <div class="tl-item reveal">
+                    <div class="when">Earlier</div>
+                    <h3>Software &amp; Systems</h3>
+                    <div class="org">Mifumo Labs</div>
+                    <p>Worked on communication platforms and systems — including bulk SMS solutions reaching customers at scale.</p>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="when">Foundation</div>
+                    <h3>Data Science &amp; Engineering</h3>
+                    <div class="org">Self-driven &amp; Community</div>
+                    <p>Built a strong foundation in data science and software engineering, turning curiosity into a craft.</p>
                 </div>
             </div>
-            <div class="row">
+        </div>
+    </section>
 
-                <!-- Contact Form -->
-                <div class="col-md-6 contact">
-                    <!-- Formspree Contact Form -->
-                    <form action="https://formspree.io/f/xnjndola" method="POST" class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="contact-name" name="name" placeholder=" " required>
-                            <label for="contact-name">
-                                <i class="fa fa-user"></i> Your Name
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="contact-email" name="email" placeholder=" " required>
-                            <label for="contact-email">
-                                <i class="fa fa-envelope"></i> Email Address
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="contact-subject" name="subject" placeholder=" " required>
-                            <label for="contact-subject">
-                                <i class="fa fa-tag"></i> Subject
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="contact-message" name="message" placeholder=" " required></textarea>
-                            <label for="contact-message">
-                                <i class="fa fa-comment"></i> Your Message
-                            </label>
-                        </div>
-                        <button type="submit" class="contact-submit-btn" id="submitBtn">
-                            <i class="fa fa-paper-plane"></i> Send Message
-                        </button>
-                        <div id="formMessage" class="form-message" style="display: none;"></div>
-                    </form>
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="center-head reveal">
+                <span class="eyebrow">Portfolio</span>
+                <h2 class="section-title">My <span>Work</span> &amp; Projects</h2>
+                <p class="section-lead" style="margin:0 auto;">A selection of products and platforms I've helped bring to life.</p>
+            </div>
+            <div class="projects-grid">
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/surasoft.png" alt="SuraSoft" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>SuraSoft</h3>
+                        <p>Innovative software solutions and development services, specializing in custom applications and system integration.</p>
+                        <a href="https://quantumintelligence.co.tz/" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/quantum-intelligence.png" alt="Quantum Intelligence" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>Quantum Intelligence</h3>
+                        <p>Advanced AI and machine learning solutions providing intelligent automation and data-driven insights for businesses.</p>
+                        <a href="https://quantumintelligence.co.tz/" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/deep-operator.png" alt="Deep Operator" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>Deep Operator</h3>
+                        <p>Specialized in deep learning and neural networks, creating cutting-edge AI models for complex problem-solving.</p>
+                        <a href="https://quantumintelligence.co.tz/" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/mfumosms.png" alt="MfumOSMS" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>SENDA</h3>
+                        <p>Bulk SMS and communication platform enabling businesses to reach customers effectively through text messaging.</p>
+                        <a href="https://senda.mifumolabs.com/" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/mfumolabs.png" alt="Mifumo Labs" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>Mifumo Labs</h3>
+                        <p>Technology innovation hub focused on next-generation solutions and fostering digital transformation initiatives.</p>
+                        <a href="https://www.mifumolabs.com/" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/falcon-cooperation.png" alt="Falcon Cooperation" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>Falcon Cooperation</h3>
+                        <p>Strategic business partnerships and collaborative ventures, building strong alliances for mutual growth.</p>
+                        <a href="https://falcon-cooperation.lovable.app" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/kinara.png" alt="Kinara Copilot" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>Kinara Copilot</h3>
+                        <p>An AI copilot assistant delivering smart, conversational guidance and automation to help users get things done faster.</p>
+                        <a href="https://kinaracopilot.netlify.app/" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/tanzabuild.png" alt="TanzaBuild" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>TanzaBuild</h3>
+                        <p>A construction and building platform showcasing projects and services, connecting clients with quality building solutions.</p>
+                        <a href="https://tanzabuild.com/" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="project reveal">
+                    <div class="project__media"><img src="img/kilimanjaro.png" alt="Kilimanjaro Adventure" loading="lazy"></div>
+                    <div class="project__body">
+                        <h3>Kilimanjaro Adventure</h3>
+                        <p>A travel and adventure platform for Kilimanjaro treks and tours, inspiring explorers to plan unforgettable journeys.</p>
+                        <a href="https://kilimanjaroadvanture.lovable.app/" target="_blank" rel="noopener" class="project__link">Visit Website <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section class="section section--tight gallery-wrap" id="gallery">
+        <div class="container">
+            <div class="center-head reveal">
+                <span class="eyebrow">Moments</span>
+                <h2 class="section-title">My <span>Gallery</span></h2>
+                <p class="section-lead" style="margin:0 auto;">Highlights, awards, and the people behind the work.</p>
+            </div>
+            <div class="gallery reveal" id="gallery-grid">
+                <a href="img/portfolio/portfolio-01-large.jpg" data-cap="Award for good project at COSTECH"><img src="img/portfolio/portfolio-01-thumbnail.jpg" alt="Award at COSTECH" loading="lazy"></a>
+                <a href="img/portfolio/portfolio-02-large.jpg" data-cap="BUNI Leaders and Members"><img src="img/portfolio/portfolio-02-thumbnail.jpg" alt="BUNI Leaders" loading="lazy"></a>
+                <a href="img/portfolio/portfolio-03-large.jpg" data-cap="Team Game"><img src="img/portfolio/portfolio-03-thumbnail.jpg" alt="Team Game" loading="lazy"></a>
+                <a href="img/portfolio/portfolio-04-large.jpg" data-cap="Safari Chap & Talent Promoters"><img src="img/portfolio/portfolio-04-thumbnail.jpg" alt="Group Team" loading="lazy"></a>
+                <a href="img/portfolio/portfolio-05-large.jpg" data-cap="BUNI Members"><img src="img/portfolio/portfolio-05-thumbnail.jpg" alt="BUNI Members" loading="lazy"></a>
+                <a href="img/portfolio/portfolio-06-large.jpg" data-cap="Florence Sway CV Page"><img src="img/portfolio/portfolio-06-thumbnail.jpg" alt="CV Page" loading="lazy"></a>
+                <a href="img/portfolio/portfolio-07-large.jpg" data-cap="Team Game & Fun Sport"><img src="img/portfolio/portfolio-07-thumbnail.jpg" alt="Fun Sport" loading="lazy"></a>
+                <a href="img/portfolio/portfolio-08-large.jpg" data-cap="Safari Chap Project"><img src="img/portfolio/portfolio-08-thumbnail.jpg" alt="Safari Chap" loading="lazy"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="center-head reveal">
+                <span class="eyebrow">Testimonials</span>
+                <h2 class="section-title">What clients <span>say</span></h2>
+            </div>
+            <div class="quotes">
+                <div class="quote reveal">
+                    <div class="mark">&ldquo;</div>
+                    <p>Your website design is truly impressive! The clean layout and easy navigation make it so user-friendly. Everything feels modern and well-organized.</p>
+                    <div class="who"><div class="avatar">ML</div><div><b>Mgasa Lucas</b><small>Quantum Intelligence</small></div></div>
+                </div>
+                <div class="quote reveal">
+                    <div class="mark">&ldquo;</div>
+                    <p>SwayBot is such a game-changer! The chatbot's quick and accurate responses really enhance the experience. It feels like a great assistant for navigating the projects.</p>
+                    <div class="who"><div class="avatar">PJ</div><div><b>Philip Jonas</b><small>EASTC</small></div></div>
+                </div>
+                <div class="quote reveal">
+                    <div class="mark">&ldquo;</div>
+                    <p>I love the attention to detail in the UI/UX. Every element feels purposeful, and the responsive design makes browsing on any device a smooth experience.</p>
+                    <div class="who"><div class="avatar">VR</div><div><b>Vince Richard</b><small>COSTECH BUNI</small></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="center-head reveal">
+                <span class="eyebrow">Get In Touch</span>
+                <h2 class="section-title">Drop <span>me</span> a line</h2>
+                <p class="section-lead" style="margin:0 auto;">Have a project in mind or just want to say hi? Let's talk.</p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__info reveal">
+                    <div class="cinfo">
+                        <i class="fa fa-map-marker"></i>
+                        <div><div class="lbl">Address</div><div class="val">Buguruni Rozana, Dar-es-Salaam</div></div>
+                    </div>
+                    <div class="cinfo">
+                        <i class="fa fa-mobile"></i>
+                        <div><div class="lbl">Phone</div><div class="val"><a href="tel:+255684475390">+255 684 475 390</a></div></div>
+                    </div>
+                    <div class="cinfo">
+                        <i class="fa fa-paper-plane"></i>
+                        <div><div class="lbl">Email</div><div class="val"><a href="mailto:florencesway@gmail.com">florencesway@gmail.com</a></div></div>
+                    </div>
+                    <div class="hero__socials" style="margin-top:6px;">
+                        <a href="https://github.com/14FLORENCE" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                        <a href="https://linkedin.com/in/florence-sway-267b982b6/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://x.com/Sway_Florenc" target="_blank" rel="noopener" aria-label="X"><i class="fa fa-twitter"></i></a>
+                        <a href="https://m.facebook.com/florence.sway.73/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    </div>
                 </div>
 
-                <br>
-                <br>
-                <!-- Updated Social Buttons -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="social-buttons">
-                            <!-- X (formerly Twitter) -->
-                            <li><a href="https://x.com/Sway_Florenc" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-                            <!-- GitHub -->
-                            <li><a href="https://github.com/14FLORENCE" class="social-btn"><i class="fa fa-github"></i></a></li>
-                            <!-- LinkedIn -->
-                            <li><a href="https://linkedin.com/in/florence-sway-267b982b6/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BSxP8YBixTzCfSCPuFnD%2BnA%3D%3D" class="social-btn"><i class="fa fa-linkedin"></i></a></li>
-                            <!-- Gmail (using mailto link) -->
-                            <li><a href="mailto:www.florencesway@gmail.com" class="social-btn"><i class="fa fa-envelope"></i></a></li>
-                            <!-- Facebook -->
-                            <li><a href="https://m.facebook.com/florence.sway.73/" class="social-btn"><i class="fa fa-facebook"></i></a></li>
-                        </ul>
+                <form class="form reveal" action="https://formspree.io/f/xnjndola" method="POST" id="contactForm">
+                    <div class="row">
+                        <div class="field"><input type="text" name="name" placeholder="Your Name" required></div>
+                        <div class="field"><input type="email" name="email" placeholder="Email Address" required></div>
                     </div>
+                    <div class="field"><input type="text" name="subject" placeholder="Subject" required></div>
+                    <div class="field"><textarea name="message" placeholder="Tell me about your project..." required></textarea></div>
+                    <button type="submit" class="btn btn--primary"><i class="fa fa-paper-plane"></i> Send Message</button>
+                    <div class="form-msg" id="formMsg"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#top" class="footer__logo">Florence<b>Sway</b><span class="dot" style="color:var(--yellow)">.</span></a>
+                <p>&copy; 2025 Florence Sway. All rights reserved.</p>
+                <div class="footer__socials">
+                    <a href="https://github.com/14FLORENCE" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                    <a href="https://linkedin.com/in/florence-sway-267b982b6/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://x.com/Sway_Florenc" target="_blank" rel="noopener" aria-label="X"><i class="fa fa-twitter"></i></a>
+                    <a href="mailto:florencesway@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
                 </div>
-                <br>
-                <br>
-                <!-- Google Maps (Change your Settings below) -->
-                <section class="d-flex flex-column" id="maps">
-                    <div id="map">
-                        <div class="map-responsive">
-                            <!-- Your Embedded Google Map using iframe -->
-                            <iframe src="https://maps.google.com/maps?q=Buguruni,%20Dar%20es%20Salaam,%20Tanzania&output=embed" width="100%" height="450" frameborder="0" style="border:0; max-width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </footer>
 
-                    <div class="col-md-6">
-                        <div id="googlemaps"></div>
-                    </div>
-                </section>
-                <!-- ==========================
-        CONTACT SECTION END
-        =========================== -->
+    <!-- To top -->
+    <button class="totop" id="totop" aria-label="Back to top"><i class="fa fa-chevron-up"></i></button>
 
+    <!-- Lightbox -->
+    <div class="lb" id="lb">
+        <button class="lb__close" id="lbClose" aria-label="Close">&times;</button>
+        <img src="" alt="" id="lbImg">
+    </div>
 
-
-                <!-- ==========================
-        FOOTER SECTION
-        =========================== -->
-                <footer>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <p> All Rights Reserved. &copy; 2025 <a href="https://14florence.github.io/Home/">FLORENCE-SWAY</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-
-
-
-                <!-- ==========================
-        FOOTER SECTION END
-        =========================== -->
-
-
-                <!-- jQuery -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-                <!-- SmoothScroll -->
-                <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js" defer></script>
-                <!-- Bootstrap -->
-                <script src="assets/bootstrap/js/bootstrap.min.js" defer></script>
-                <!-- Waypoints -->
-                <script src="js/waypoints.min.js" defer></script>
-                <!-- classie.js -->
-                <script src="js/classie.js" defer></script>
-                <!-- FlexSlider -->
-                <script src="assets/flexslider/jquery.flexslider.js" defer></script>
-                <!-- Modernizr -->
-                <script src="js/modernizr.js"></script>
-                <!-- Text Rotator -->
-                <script src="assets/textrotator/jquery.simple-text-rotator.js" defer></script>
-                <!-- Lightbox.js -->
-                <script src="assets/lightbox/js/lightbox.min.js" defer></script>
-                <!-- Google Maps API - Uncomment and add your API key if you want to use the JavaScript API -->
-                <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE"></script> -->
-
-                <!-- Theme JavaScript Core -->
-                <script src="js/main.js"></script>
-                <script src="js/script.js"></script>
-
-                <!-- GOOGLE MAPS DATA -->
-                <script type="text/javascript">
-                    // When the window has finished loading create our google map below
-                    // Only initialize if Google Maps API is loaded (requires API key)
-                    if (typeof google !== 'undefined' && google.maps) {
-                        google.maps.event.addDomListener(window, 'load', init);
-                    }
-
-                    function init() {
-                        // Basic options for a simple Google Map
-                        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                        var mapOptions = {
-                            // How zoomed in you want the map to start at (always required)
-                            zoom: 15,
-
-                            scrollwheel: false,
-
-                            // The latitude and longitude to center the map (always required)
-                            center: new google.maps.LatLng(40.68961985411178, -74.01618003845215), // New York
-
-                            // How you would like to style the map.
-                            // This is where you would paste any style found on Snazzy Maps.
-                            styles: [{
-                                featureType: 'water',
-                                stylers: [{
-                                    color: '#F2F2F2'
-                                }, {
-                                    visibility: 'on'
-                                }]
-                            }, {
-                                featureType: 'landscape',
-                                stylers: [{
-                                    color: '#FFFFFF'
-                                }]
-                            }, {
-                                featureType: 'road',
-                                stylers: [{
-                                    saturation: -100
-                                }, {
-                                    lightness: 45
-                                }]
-                            }, {
-                                featureType: 'road.highway',
-                                stylers: [{
-                                    visibility: 'simplified'
-                                }]
-                            }, {
-                                featureType: 'road.arterial',
-                                elementType: 'labels.icon',
-                                stylers: [{
-                                    visibility: 'off'
-                                }]
-                            }, {
-                                featureType: 'administrative',
-                                elementType: 'labels.text.fill',
-                                stylers: [{
-                                    color: '#ADADAD'
-                                }]
-                            }, {
-                                featureType: 'transit',
-                                stylers: [{
-                                    visibility: 'off'
-                                }]
-                            }, {
-                                featureType: 'poi',
-                                stylers: [{
-                                    visibility: 'off'
-                                }]
-                            }]
-                        };
-
-                        // Get the HTML DOM element that will contain your map
-                        // We are using a div with id="map" seen below in the <body>
-                        var mapElement = document.getElementById('googlemaps');
-
-                        // Create the Google Map using out element and options defined above
-                        var map = new google.maps.Map(mapElement, mapOptions);
-                    }
-                </script>
-
-                <!-- TEXT ROTATOR SETTINGS -->
-                <script type="text/javascript">
-                    $(document).ready(function() {
-                        $(".rotate").textrotator({
-                            animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-                            separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-                            speed: 2000 // How many milliseconds until the next word show.
-                        });
-                    });
-                </script>
-
+    <script src="js/modern.js" defer></script>
 </body>
 
 </html>
