@@ -52,6 +52,23 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    /* ---------- Clean in-page navigation (no #hash left in the address bar) ---------- */
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+            var id = a.getAttribute('href').slice(1);
+            if (!id) return;
+            var target = id === 'top' ? null : document.getElementById(id);
+            if (id !== 'top' && !target) return;
+            e.preventDefault();
+            if (id === 'top') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        });
+    });
+
     /* ---------- Active link scroll-spy ---------- */
     var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
     var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav__links a'));
